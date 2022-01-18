@@ -1,16 +1,18 @@
 import React from 'react';
+import MyButton from "./UI/button/MyButton";
 
 const TableItem = (props) => {
+
     return (
         <>
             <tr>
-                <td>{props.post.id}</td>
+                <td>{props.number}</td>
                 <td>{props.post.title}</td>
                 <td>{props.post.stack}</td>
                 <td>
-                    <button className="btn btn-outline-danger">
-                        delete
-                    </button>
+                    <MyButton onClick={() => props.removePost(props.post)}>
+                        Delete
+                    </MyButton>
                 </td>
             </tr>
         </>
